@@ -1,0 +1,6 @@
+# vim: ft=sshconfig:
+
+IdentityFile ~/.ssh/id_rsa_wsl
+
+Host github.com
+  MACs hmac-sha1,hmac-md5
