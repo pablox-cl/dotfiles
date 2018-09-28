@@ -7,7 +7,7 @@ source ~/.zplug/init.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # exports
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR=~/.nvm
 
 path=(
    ~/.local/bin
@@ -38,9 +38,8 @@ setopt vi
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
-# rbenv init
+# inits
 eval "$(rbenv init -)"
-
 eval "$(direnv hook zsh)"
 
 if_file_exists_run_it "$NVM_DIR/nvm.sh"
