@@ -43,4 +43,7 @@ eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if ! zplug check; then
+    zplug install
+fi
 zplug load
