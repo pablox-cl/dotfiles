@@ -12,7 +12,6 @@ export NVM_DIR="$HOME/.nvm"
 path=(
    ~/.local/bin
    ~/.rbenv/bin
-   /home/linuxbrew/.linuxbrew/bin
    $path
 )
 
