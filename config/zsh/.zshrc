@@ -11,6 +11,8 @@ export NVM_DIR=~/.nvm
 
 path=(
    ~/.local/bin
+   ~/.yarn/bin
+   ~/.config/yarn/global/node_modules/.bin
    ~/.rbenv/bin
    $path
 )
