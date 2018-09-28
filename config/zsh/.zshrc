@@ -15,10 +15,13 @@ path=(
    $path
 )
 
+function if_file_exists_run_it {
+    [ -f "$1" ] && source "$1"
+    }
+
 #source $ZDOTDIR/bindings.zsh
 #source $ZDOTDIR/aliases.zsh
 #source $ZDOTDIR/git.zsh
-source $NVM_DIR/nvm.sh
 
 HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=500000
@@ -40,7 +43,8 @@ eval "$(rbenv init -)"
 
 eval "$(direnv hook zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if_file_exists_run_it "$NVM_DIR/nvm.sh"
+if_file_exists_run_it  "~/.fzf.zsh"
 
 if ! zplug check; then
     zplug install
