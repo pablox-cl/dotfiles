@@ -27,12 +27,8 @@ HISTFILE="$ZDOTDIR/.zhistory"
 HISTSIZE=500000
 SAVEHIST=$HISTSIZE
 
-# Bindings & Options
-bindkey '^[[Z' reverse-menu-complete       # Shift-Tab
-bindkey -M viins '^?' backward-delete-char # Backspace
-
-# setopt inc_append_history
-setopt vi
+# got to fix this, dunno why it's working so bad (is prezto/editor??)
+# setopt vi
 
 # Completion
 autoload -U +X compinit && compinit
