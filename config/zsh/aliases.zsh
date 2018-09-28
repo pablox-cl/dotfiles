@@ -52,6 +52,7 @@ alias ln='nocorrect ln'
 alias root='sudo su'
 alias reboot='sudo reboot'
 alias halt='sudo halt'
+alias _='sudo'
 
 # new commands
 alias h='history | grep $1'
