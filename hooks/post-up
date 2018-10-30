@@ -1,6 +1,6 @@
 #!/bin/sh
 
-rcup -v -K config/zsh/{.zlogin,.zlogout,.zshrc,.zshenv,.zprofile}
+rcup -K config/zsh/{.zlogin,.zlogout,.zshrc,.zshenv,.zprofile}
 
 if [ ! -d ~/.config/nvim/pack/minpac/opt/minpac ]; then
   git clone https://github.com/k-takata/minpac.git \
