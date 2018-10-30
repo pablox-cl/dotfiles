@@ -14,6 +14,8 @@ export FZF_DEFAULT_COMMAND='
     sed s/^..//
   ) 2>/dev/null
 '
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
 
 path=(
    ~/.local/bin
