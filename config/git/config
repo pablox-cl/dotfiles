@@ -1,0 +1,55 @@
+[core]
+    editor = nvim
+    excludesfile = ~/.config/git/ignore
+[user]
+    name = Pablo Olmos de Aguilera Corradini
+    email = pablo@odac.co
+    signingkey = 0x515887C54E905CE9
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[help]
+    autocorrect = 1
+[merge]
+    ff = only
+[status]
+    branch = 1
+    short = 1
+[color]
+    ui = auto
+[diff]
+    mnemonicprefix = true
+[url "git@github.com:pablox-cl/"]
+    pushInsteadOf = "https://github.com/pablox-cl"
+[commit]
+    gpgsign = true
+[rebase]
+    stat = true
+    autosquash = true
+    autoStash = true
+[rerere]
+    enabled = true
+[merge]
+    tool = nvimdiff
+[mergetool]
+    keepBackup = false
+[mergetool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c '$wincmd l' -c '$wincmd J'
+[alias]
+    st = status
+    co = checkout
+    ca = commit --amend
+    ci = commit --verbose
+    d  = diff
+    dc = diff --cached
+    lg = log --oneline --decorate --all --graph -30
+    a  = add --verbose
+    add = add --verbose
+    whatsnew = log ...@{u}
+    recommit = "!f() { git commit --amend --no-edit; }; f"
+[fetch]
+    prune = true
+
+# vim: ft=gitconfig
