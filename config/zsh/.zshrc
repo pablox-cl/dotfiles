@@ -60,3 +60,6 @@ if ! zplug check; then
     zplug install
 fi
 zplug load
+
+command -v kitty > /dev/null && kitty + complete setup zsh | source /dev/stdin
+
