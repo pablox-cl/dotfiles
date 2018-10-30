@@ -25,7 +25,10 @@ alias cls='clear'                      # dos ftw
 # alias q='exit'                         # too dangerous?
 alias md='mkdir'
 alias rdir='rmdir'
-alias pp='prepend'
+#alias pp='prepend'
+alias p='sudo pacman'
+alias d='kitty +kitten diff'
+alias icat='kitty +kitten icat'
 
 # modified commands
 alias grep='grep -i'
@@ -37,10 +40,10 @@ alias da='date "+%A, %B %d, %Y [%T]"'
 alias bk='cd -'                        # go back to the last directory
 
 # I don't like interactive commands
-alias cp='nocorrect cp'
-alias mv='nocorrect mv'
-alias rm='nocorrect rm'
-alias ln='nocorrect ln'
+# alias cp='nocorrect cp'
+# alias mv='nocorrect mv'
+# alias rm='nocorrect rm'
+# alias ln='nocorrect ln'
 
 # I honestly don't remember why I did this... I'll keep it ignored from now
 # alias chown='chown --preserve-root'
