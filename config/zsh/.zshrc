@@ -39,6 +39,11 @@ SAVEHIST=$HISTSIZE
 
 # got to fix this, dunno why it's working so bad (is prezto/editor??)
 # setopt vi
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+
+zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+setopt CASE_GLOB
 
 # Completion
 autoload -U +X compinit && compinit
