@@ -122,6 +122,10 @@ fi
 alias pbc='pbcopy'
 # alias pbp='pbpaste'
 
+alias ruby-yardoc='cd ~/code/documentation/ruby-2.5.1 && nohup yard server --port 8989 -m ruby-2.5.1 .yardoc stdlib .yardoc-stdlib &>/dev/null & $BROWSER http://localhost:8989; cd ~'
+alias ruby-rdoc='cd ~/code/documentation/rdoc-ruby-2.5.1 && nohup python -m http.server 8990 &>/dev/null & $BROWSER http://localhost:8990; cd ~'
+alias http-server='python -m http.server 8000'
+
 # http://www.zsh.org/mla/users/2011/msg00792.html
 alias alert='notify-send --urgency=low -i \
   ${${?/0/terminal}//<->*/error} ${history[$HISTCMD]%[;&|]*}'
